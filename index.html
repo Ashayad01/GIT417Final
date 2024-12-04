@@ -19,9 +19,9 @@
       <h1>Arte</h1>
       <nav>
         <ul>
-          <li><a href="gallery">Gallery</a></li>
-          <li><a href="shop">Shop</a></li>
-          <li><a href="Contact">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#game">Game</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <button id="light-mode">
@@ -138,78 +138,19 @@
             height="650"
           />
         </section>
-      </section>
-
-      <section id="shop">
-        <h2>Shop</h2>
-        <section class="shop_img">
-          <img
-            src="Shop Images/ShopImg_1.png"
-            alt="print of the skull night art piece"
-          />
-          <h3>Skull Night</h3>
-          <p>Description of the print</p>
-          <p>$10.00</p>
-          <button>Add To Cart</button>
-        </section>
-        <section class="shop_img">
-          <img
-            src="Shop Images/ShopImg_2.png"
-            alt="print of the Boredom art piece"
-          />
-          <h3>Boredom</h3>
-          <p>Description of the print</p>
-          <p>$10.00</p>
-          <button>Add To Cart</button>
-        </section>
-        <section class="shop_img">
-          <img
-            src="Shop Images/ShopImg_3.png"
-            alt="print of the Jelly Heart art piece"
-          />
-          <h3>Jelly Heart</h3>
-          <p>Description of the print</p>
-          <p>$10.00</p>
-          <button>Add To Cart</button>
-        </section>
-        <section class="shop_img">
-          <img
-            src="Shop Images/ShopImg_4.png"
-            alt="print of the Bright art piece"
-          />
-          <h3>Bright</h3>
-          <p>Description of the print</p>
-          <p>$10.00</p>
-          <button>Add To Cart</button>
-        </section>
-        <section class="shop_img">
-          <img
-            src="Shop Images/ShopImg_5.png"
-            alt="print of the Common art piece"
-          />
-          <h3>Common</h3>
-          <p>Description of the print</p>
-          <p>$10.00</p>
-          <button>Add To Cart</button>
-        </section>
-        <section class="shop_img">
-          <img
-            src="Shop Images/ShopImg_6.png"
-            alt="print of the Looking Glass art piece"
-          />
-          <h3>Looking Glass</h3>
-          <p>Description of the print</p>
-          <p>$10.00</p>
-          <button>Add To Cart</button>
-        </section>
-      </section>
+      </section>   
       <section id="game">
-        <h2>Win A Print</h2>
-        <p>This is were the direction of the game</p>
         <section>
-          <p>Enter a number between 1 and 10</p>
-          <button>Submit</button>
+           <h2>Win A Print</h2>
+          <p>It's a quick and exciting game of chance! Are you ready to match wits with the computer? Give it a try and see if you can guess the same number.</p>
         </section>
+       
+        <form id="game-section">
+          <label for="message">Enter a number between 1 and 10:</label>
+          <textarea id="game-number"></textarea>
+  
+          <input type="submit" name="gameSubmit" id="gameSubmit" value="Submit" />
+        </form>
       </section>
       <section id="contact">
         <h2>Contact</h2>
@@ -248,35 +189,31 @@
         </section>
 
         <form id="myForm">
-          <label for="firstName">First Name</label>
+          <label for="firstName">First Name<span class="required">*</span></label>
           <input
             type="text"
             id="firstName"
             name="firstName"
-            placeholder="First Name"
           />
 
-          <label for="lastName">Last Name</label>
+          <label for="lastName">Last Name<span class="required">*</span></label>
           <input
             type="text"
             id="lastName"
             name="lastName"
-            placeholder="Last Name"
           />
 
-          <label for="phoneNumber">Phone Number</label>
+          <label for="phoneNumber">Phone Number<span class="required">*</span></label>
           <input
             type="text"
             id="phoneNumber"
             name="phoneNumber"
-            placeholder="xxx-xxx-xxxx"
           />
-          <label for="email">Email</label>
+          <label for="email">Email<span class="required">*</span></label>
           <input
             type="text"
             id="email"
             name="email"
-            placeholder="example@email.com"
           />
           <fieldset>
             <legend>Prefered Contact<span class="required">*</span></legend>
@@ -294,7 +231,7 @@
           </fieldset>
   
           <label for="message">Message</label>
-          <textarea id="message" placeholder="Please add a message"></textarea>
+          <textarea id="message""></textarea>
   
           <input type="submit" name="mySubmit" id="mySubmit" value="Submit" />
 
@@ -305,7 +242,7 @@
     </main>
     <footer>
       <small>Copyright 2024 Ashaya Stewart </small>
-      <p>This site is for educational purposes</p>
+      <small>This site is for educational purposes</small>
     </footer>
   </body>
 </html>

@@ -158,9 +158,9 @@ li a:hover{
     font-weight: bold;
     width: 50%;
     margin: 0 auto;
-    padding-top: 13rem;
+    padding-top: 10rem;
     padding-right: 5rem;
-    line-height: 1.75rem;
+    line-height: 2.25rem;
 }
 
 #biography img{
@@ -172,7 +172,6 @@ li a:hover{
 h2 {
     font-size: 4rem;
     font-weight: bold;
-    margin-left: 4rem;
     text-transform: uppercase;
 }
 
@@ -183,18 +182,81 @@ h2 {
 
 /* GAME */
 #game{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: var(--second-base);
+    margin: 5rem;
+    padding: 5rem;
 }
+#game h2{
+    margin-left: 4.5rem;
+}
+
+
+#game p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2rem 5rem;
+    width: 80%;
+    line-height: 2rem;
+}
+
+#game form{
+    width: 50%;
+    margin: 1rem auto;
+    display: block;
+}
+
+#game-section label{
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin: 2rem auto;
+    line-height: 2rem;
+}
+#game-section textarea{
+    border: none;
+    background-color: var(--accent-color);
+    font-size: 30px;
+    color: var(--text-color);
+    width: 25%;
+    height: 20%;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 1rem auto;
+}
+
+#game-section input{
+    border: none;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10%;
+    font-size: 20px;
+    margin: auto 9rem;
+}
+
+#game-section input:hover{
+    background-color: var(--accent-color);
+}
+
 
 /* CONTACT */
 
 #contact h2{
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
+    padding-top: 5rem;
 }
 
 #contact ul{
    justify-content: center;
+}
+
+#contact li{
+    margin: 2rem;
 }
 .contact-btn a{
     background-color: var(--text-color);
@@ -211,34 +273,94 @@ h2 {
 
 /* --form-- */
 
-form{
-    width: 50%;
-    margin: 4rem auto;
-    display:block;
+#contact form{
+	display: block;
+	width: 50%;
+    padding-top: 2em;
+	padding-bottom: 8em;
+	margin: 0 auto;
+	color: var(--text-color);
+	font-size: 30px;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-    font-size: 20px;
-
+input, label, fieldset{
+	display: block;
+	width: 95%;
 }
-legend{
-    font-weight: bold;
-    display: block;
-    font-size: 20px;
 
+.required{
+  display: inline-block;
+  color: #DE0B63;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+label{
+	margin: 0.75em 0 0.25em 0;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 input{
-    border: none;
-    width: 100%;
-    margin: .5rem auto;
+	font-size: 40px;
+	padding: 0.25em 0.5em;
+	border: none;
+	height: 1.5em;
+    background-color: var(--button-color);
+    color: var(--text-color);
 }
 
+fieldset{
+	border: 3px solid var(--button-color);
+	padding: 0.5em 0 1em 0.5em;
+	margin: 0.75em 0 0.25em 0;
+	width: 98%;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 3fr;
+}
+
+input[type=submit]{
+	padding: 0.75em;
+	width: 35%;
+	height: auto;
+	margin-left: 67%;
+	color: var(--text-color);
+	background-color: var(--button-color);
+	border: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+textarea{
+	width: 100%;
+	height: 5em;
+	margin-bottom: 1em;
+    font-size: 30px;
+    padding: 0.25em 0.5em;
+    background-color: var(--button-color);
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus{
+	border-color: var(--accent-color);
+	box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
+	border-radius: 4px;
+}
+
+input:error, textarea:error{
+	border-color: #DE0B63;
+}
 
 /* FOOTER */
 footer{
     background-color: var(--button-color);
+    padding: 2rem;
+}
+
+footer small{
+    display: block;
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: bold;
 }
 

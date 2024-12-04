@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* MY CODE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --text-color: #F4F0F1;
+    --base-color: #C5C2BB;
+    --second-base: #746963;
+    --button-color: #585550;
+    --accent-color: #A99890;
+}
+
+.darkmode{
+    --text-color: #F4F0F1;
+    --base-color: #585550;
+    --second-base: #C5C2BB;
+    --button-color: #A99890;
+    --accent-color: #746963;
+}
+
+body{
+    margin: 0 auto;
+    background-color: var(--base-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    padding-left: 4.5rem;
+    padding-top: 1.5rem;
+}
+
+ul {
+    display: flex;
+    margin-top: 2.25rem;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 40px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+li a:hover{
+    background-color: var(--button-color);
+    color: var(--base-color);
+}
+
+.darkmode li a:hover {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    
+}
+
+
+
+/* -- dark light mode -- */
+
+#light-mode {
+    height: 50px;
+    width: 50px;
+    padding: 15px 15px;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 20px 20px;
+}
+
+#light-mode svg{
+    fill:var(--base-color);
+}
+
+#light-mode svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+/* Biography */
+
+#biography {
+    display: flex;
+    margin: 10rem;
+}
+
+#biography p{
+    font-size: 20px;
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 13rem;
+    padding-right: 5rem;
+    line-height: 1.75rem;
+}
+
+#biography img{
+    border-radius: 25%;
+    margin: 0 auto;
+}
+
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: 4rem;
+    text-transform: uppercase;
+}
+
+/* GALLERY */
+#gallery{
+    background-color: var(--second-base);
+}
+
+/* GAME */
+#game{
+    background-color: var(--second-base);
+}
+
+/* CONTACT */
+
+#contact h2{
+    margin: 0;
+    text-align: center;
+}
+
+#contact ul{
+   justify-content: center;
+}
+.contact-btn a{
+    background-color: var(--text-color);
+    border-radius: 50%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+}
+
+
+.contact-btn a:hover{
+    background-color: var(--accent-color);
+}
+
+
+/* --form-- */
+
+form{
+    width: 50%;
+    margin: 4rem auto;
+    display:block;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+
+}
+legend{
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+
+}
+
+input{
+    border: none;
+    width: 100%;
+    margin: .5rem auto;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: var(--button-color);
+}
+

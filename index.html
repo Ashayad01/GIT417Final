@@ -12,7 +12,7 @@
     <!-- STYLESHEET-->
     <link rel="stylesheet" href="styles.css" />
     <!-- SCRIPTS -->
-    <script src="scripts.js" defer></script>
+    <script type="text/javascript" src="scripts.js" defer></script>
   </head>
   <body>
     <header>
@@ -71,10 +71,9 @@
         />
       </section>
       <section id="gallery">
-        <section class="gallery_img">
+        <section id="product1" class="currentItem">
           <h3>Skull Night</h3>
-          <p>Oil Pastel | 10" x 8"</p>
-          <p>This is the discription of this image</p>
+          <p>Oil Pastel | 10" x 8"<br>This is the discription of this image</p>
           <img
             src="Images/img_1.jpg"
             alt="Art piece of a skull on a table surrounded by plants"
@@ -83,10 +82,9 @@
           />
         </section>
 
-        <section class="gallery_img">
+        <section id="product2" class="hiddenItem">
           <h3>Boredom</h3>
-          <p>Oil Pastel | 16" x 20"</p>
-          <p>This is the discription of this image</p>
+          <p>Oil Pastel | 16" x 20"<br>This is the discription of this image</p>
           <img
             src="Images/img_2.jpg"
             alt="This is an oil pastel art piece of a girl up close squishing her face."
@@ -94,10 +92,9 @@
             height="650"
           />
         </section>
-        <section class="gallery_img">
+        <section id="product3" class="hiddenItem">
           <h3>Jelly Heart</h3>
-          <p>Oil Pastel | 8" x 8"</p>
-          <p>This is the discription of this image</p>
+          <p>Oil Pastel | 8" x 8"<br>This is the discription of this image</p>
           <img
             src="Images/img_3.jpg"
             alt="This is an oil paint painting of a purple woman with jelly fish swillinh out of her heart."
@@ -105,10 +102,9 @@
             height="650"
           />
         </section>
-        <section class="gallery_img">
+        <section id="product4" class="hiddenItem">
           <h3>Bright</h3>
-          <p>Oil Pastel | 24" x 30"</p>
-          <p>This is the discription of this image</p>
+          <p>Oil Pastel | 24" x 30"<br>This is the discription of this image</p>
           <img
             src="Images/img_4.jpeg"
             alt="This is an oil pastel art piece of a girl surrounded by colorful fish."
@@ -116,10 +112,9 @@
             height="650"
           />
         </section>
-        <section class="gallery_img">
+        <section id="product5" class="hiddenItem">
           <h3>Common</h3>
-          <p>Oil Pastel | 8" x 10"</p>
-          <p>This is the discription of this image</p>
+          <p>Oil Pastel | 8" x 10"<br>This is the discription of this image</p>
           <img
             src="Images/img_5.jpg"
             alt="This is an oil pastel art piece of a girl deep in thought."
@@ -127,10 +122,9 @@
             height="650"
           />
         </section>
-        <section class="gallery_img">
+        <section id="product6" class="hiddenItem">
           <h3>Looking Glass</h3>
-          <p>Oil Pastel | 16" x 20"</p>
-          <p>This is the discription of this image</p>
+          <p>Oil Pastel | 16" x 20"<br>This is the discription of this image</p>
           <img
             src="Images/img_6.jpg"
             alt="This is an oil painting of a piece of a girl reflection through a brocken glass."
@@ -138,18 +132,33 @@
             height="650"
           />
         </section>
+        <section id="switcherButtons" id="click">
+          <h2 class="sr-only">Click on a Button to View a Product</h2>
+          <button id="btn1">Skull night</button>
+          <button id="btn2">Boredom</button>
+          <button id="btn3">Jelly Heart</button>
+          <button id="btn4">Bright Delight</button>
+          <button id="btn5">Common Thought</button>
+          <button id="btn6">Looking Glass</button>
+        </section>
       </section>   
       <section id="game">
         <section>
            <h2>Win A Print</h2>
           <p>It's a quick and exciting game of chance! Are you ready to match wits with the computer? Give it a try and see if you can guess the same number.</p>
+          <span id="snakeEyesMesg">Let's Play</span>
+
+          <section id="game-result">
+            <span id="random1"></span>
+            <span id="random2"></span>
+          </section>
         </section>
        
         <form id="game-section">
           <label for="message">Enter a number between 1 and 10:</label>
-          <textarea id="game-number"></textarea>
+          <input type="number" name="numGame" id="userNumber" required>
   
-          <input type="submit" name="gameSubmit" id="gameSubmit" value="Submit" />
+          <input type="submit" name="guessGame" id="guessGame" value="Play"/>
         </form>
       </section>
       <section id="contact">
@@ -188,54 +197,58 @@
           </ul>
         </section>
 
-        <form id="myForm">
+        <form id="myForm" action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="GET">
           <label for="firstName">First Name<span class="required">*</span></label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-          />
-
+          <span class="message">Please enter your First name</span>
+          <input name="firstName" id="firstName" type="text"> 
+          
           <label for="lastName">Last Name<span class="required">*</span></label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-          />
-
-          <label for="phoneNumber">Phone Number<span class="required">*</span></label>
-          <input
-            type="text"
-            id="phoneNumber"
-            name="phoneNumber"
-          />
-          <label for="email">Email<span class="required">*</span></label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-          />
-          <fieldset>
-            <legend>Prefered Contact<span class="required">*</span></legend>
-            <input
-              type="radio"
-              name="contactPref"
-              id="prefPhone"
-              required
-              check
-            />
-            <label for="prePfhone">Phone</label>
-  
-            <input type="radio" name="contactPref" id="prefEmail" />
-            <label for="prefEmail">Email</label>
+          <span class="message">Please enter your last name</span>
+          <input name="lastName" id="lastName" type="text">
+          
+          <label for="phoneNumber">PhoneNumber<span class="required">*</span></label>
+          <span class="message">Please enter a valid phone number</span>
+          <input name="phoneNumber" id="phoneNumber" type="text">
+          
+           <label for="email">Email<span class="required">*</span></label>
+          <span class="message">Please enter a valid email</span>
+          <input name="email" id="email" type="text">
+          
+         <fieldset>
+            <legend>Preferred Contact<span class="required">*</span></legend>
+            <div>
+                <input
+                    type="radio"
+                    name="contactPref"
+                    id="prefPhone"
+                    required
+                />
+                <label for="prefPhone">Phone</label>
+            </div>
+            <div>
+                <input
+                    type="radio"
+                    name="contactPref"
+                    id="prefEmail"
+                />
+                <label for="prefEmail">Email</label>
+            </div>
           </fieldset>
-  
-          <label for="message">Message</label>
-          <textarea id="message""></textarea>
-  
-          <input type="submit" name="mySubmit" id="mySubmit" value="Submit" />
-
+          
+          <label for="message">Message<span class="required">*</span></label>
+          <span class="message">Please add a message</span>
+          <textarea id="message"></textArea>
+         
+          
+          <input type="submit" name="mySubmit" id="mySubmit" value="Submit Form">
         </form>
+        
+        <section id="success" class="hide">
+          <h2>Thank you!</h2>
+          <p>You have successfully submitted the form. Here is the information you sent us:</p>
+          <p id="formSub"></p>
+        </section>
+
 
 
       </section>

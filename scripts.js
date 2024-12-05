@@ -1,24 +1,23 @@
 // Dark & Light mode
 
-let darkmode = localStorage.getItem("darkmode");
-const lightMode = document.getElementById("light-mode");
+let lightModeBtn = document.getElementById('light-mode');
 
-let darkmodeOn = () => {
-    document.body.classList.add("darkmode");
-    localStorage.setItem('darkmode', 'active');
-}
+// toggle dark and light mode
+ function darkModeOn() {
+  document.body.classList.add("darkmode");
+ }
 
-let darkmodeOff = () => {
-    document.body.classList.remove('darkmode');
-    localStorage.setItem('darkmode', null);
-}
+ function darkModeOff() {
+  document.body.classList.remove("darkmode");
+ }
 
-if(darkmode === "active") darkmodeOn();
-
-lightMode.addEventListener("click", () => {
-    darkmode = localStorage.getItem('darkmode');
-    darkmode !== "active" ? darkmodeOn() : darkmodeOff();
-})
+ lightModeBtn.addEventListener('click', function(){
+  if(!document.body.classList.contains('darkmode')){
+    darkModeOn();
+  } else {
+    darkModeOff();
+  }
+ });
 
 // GAllERY 
 
